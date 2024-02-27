@@ -1,16 +1,22 @@
-body, html {
-    margin: 0;
-    padding: 0;
+/* Sets the default margin and padding for the body and html elements to 0 to remove any default spacing. 
+   It also sets the default font family to Arial, with sans-serif as a fallback, for a clean, modern look. */
+   body, html {
+    margin: 0px;
+    padding: 0px;
     font-family: Arial, sans-serif;
 }
 
+/* Styles the container element with the ID 'stopwatch'. 
+   It centers the text inside this container and adds padding for spacing inside the container. */
 #stopwatch {
-    text-align: center;
-    padding: 20px;
+    text-align: center; /* Centers the text horizontally within the stopwatch container. */
+    padding: 20px; /* Adds space inside the container around its content. */
 }
 
+/* Styles the element with the ID 'time', typically used to display the timer. 
+   This makes the timer text larger and more prominent, and adds some spacing below it. */
 #time {
-    display: block;
-    font-size: 2em;
-    margin-bottom: 20px;
+    display: block; /* Ensures the element is treated as a block-level element, affecting how it interacts with surrounding elements. */
+    font-size:30px; /* Sets the font size to twice the size of the normal text, making it stand out. */
+    margin-bottom: 20px; /* Adds space below the timer to separate it from any elements that follow. */
 }
