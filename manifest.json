@@ -2,9 +2,7 @@
     "manifest_version": 3,
     "name": "Stopwatch",
     "version": "1.0",
-    "description": "A simple stopwatch extension.",
     "action": {
       "default_popup": "stopwatch.html"
-    },
-    "permissions": ["activeTab"]
+    }
   }
