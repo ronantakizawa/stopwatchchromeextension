@@ -3,34 +3,6 @@ let startTime = 0;
 let elapsedTime = 0;
 let timerInterval;
 
-// Function to convert time in milliseconds to a human-readable format (HH:MM:SS).
-function timeToString(time) {
-    // Convert milliseconds to hours and round down to nearest whole number.
-    let diffInHrs = time / 3600000;
-    let hh = Math.floor(diffInHrs);
-
-    // Calculate remaining minutes after converting hours and round down.
-    let diffInMin = (diffInHrs - hh) * 60;
-    let mm = Math.floor(diffInMin);
-
-    // Calculate remaining seconds after converting minutes and round down.
-    let diffInSec = (diffInMin - mm) * 60;
-    let ss = Math.floor(diffInSec);
-
-    // Format minutes, seconds, and hours to ensure they are two digits.
-    let formattedMM = mm.toString().padStart(2, "0");
-    let formattedSS = ss.toString().padStart(2, "0");
-    let formattedHH = hh.toString().padStart(2, "0");
-
-    // Return the formatted time string.
-    return `${formattedHH}:${formattedMM}:${formattedSS}`;
-}
-
-// Function to display the timer value on the web page.
-function print(txt) {
-    document.getElementById('time').innerText = txt;
-}
-
 // Function to start the timer.
 function start() {
     // Set the start time based on current time minus elapsed time (allows for pausing).
@@ -68,6 +40,34 @@ function reset() {
 
     // Update the button text to indicate the timer can be started.
     document.getElementById('startStop').innerText = 'Start';
+}
+
+// Function to convert time in milliseconds to a human-readable format (HH:MM:SS).
+function timeToString(time) {
+    // Convert milliseconds to hours and round down to nearest whole number.
+    let diffInHrs = time / 3600000;
+    let hh = Math.floor(diffInHrs);
+
+    // Calculate remaining minutes after converting hours and round down.
+    let diffInMin = (diffInHrs - hh) * 60;
+    let mm = Math.floor(diffInMin);
+
+    // Calculate remaining seconds after converting minutes and round down.
+    let diffInSec = (diffInMin - mm) * 60;
+    let ss = Math.floor(diffInSec);
+
+    // Format minutes, seconds, and hours to ensure they are two digits.
+    let formattedMM = mm.toString().padStart(2, "0");
+    let formattedSS = ss.toString().padStart(2, "0");
+    let formattedHH = hh.toString().padStart(2, "0");
+
+    // Return the formatted time string.
+    return `${formattedHH}:${formattedMM}:${formattedSS}`;
+}
+
+// Function to display the timer value on the web page.
+function print(txt) {
+    document.getElementById('time').innerText = txt;
 }
 
 // Add a click event listener to the start/stop button.
